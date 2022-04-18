@@ -8,7 +8,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=150)
     description = models.CharField(max_length=256)
     body = models.TextField()
-    image = models.ImageField(default='', upload_to='blogs', null=True)
+    image = models.ImageField(default='', upload_to='blogs', null=True, blank=True)
     active = models.BooleanField(default=False)
     created_At = models.DateTimeField(default=datetime.now)
 
